@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    main
+        div.container
+            br
+            br
+            div.selection.columns
+                div.column.is-8.is-offset-2
+                   div.title.has-text-centered
+                        p Hello Pug! #{result.content}

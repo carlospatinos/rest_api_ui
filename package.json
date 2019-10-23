@@ -3,10 +3,14 @@
   "description": "A sample app that demonstrates how to consume football-data RESTful API",
   "main": "server.js",
   "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/inert": "^5.2.2",
+    "express": "^4.17.1",
     "handlebars": "^4.0.6",
     "hapi": "^16.0.2",
     "lodash.filter": "^4.6.0",
     "lodash.take": "^4.1.1",
+    "pug": "^2.0.4",
     "request": "^2.79.0",
     "vision": "^4.1.1"
   }
