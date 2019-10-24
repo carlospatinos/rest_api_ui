@@ -35,10 +35,10 @@ const Eureka = require('eureka-js-client').Eureka;
 
 const eureka = new Eureka({
   instance: {
-    app: 'expressservice',
-    hostName: 'localhost',
+    app: 'rest-ui',
+    hostName: 'rest-ui',
     ipAddr: '127.0.0.1',
-    statusPageUrl: 'http://localhost:8081',
+    statusPageUrl: 'http://localhost:3000/index',
     port: {
       '$': 5000,
       '@enabled': 'true',
@@ -61,6 +61,6 @@ eureka.start(function(error){
   if(!error){
     var appInfo = eureka.getInstancesByAppId('rest-service');
     console.log('appInfo:' + JSON.stringify(appInfo));
-    console.log("Rest URL = "+ appInfo[0].hostName + appInfo[0].port['$']);
+    console.log("Rest URL = "+ appInfo[0].hostName + ":"+ appInfo[0].port['$']);
   }
 });
